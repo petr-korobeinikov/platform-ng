@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block tabs %}
+{{ super() }}
+<style>
+    .md-container {
+        background: url(asset/bg.jpeg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .landing-container h2 {
+        background-color: var(--md-primary-fg-color);
+        color: var(--md-primary-bg-color);
+        padding: .5em;
+        margin-bottom: 0;
+    }
+
+    .landing-container .landing-block {
+        margin: .5em;
+    }
+
+    .landing-container .landing-text-block {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #36464e;
+        padding: .5em;
+    }
+
+    .landing-container .go {
+        text-align: right;
+    }
+
+    .landing-container {
+        box-sizing: border-box;
+    }
+
+    .landing-container .column {
+        float: left;
+        width: 50%;
+    }
+
+    .landing-container .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="landing-container">
+    <div class="row">
+        <div class="column">
+            <div class="landing-block">
+                <h2>Для разработчиков сервисов</h2>
+                <div class="landing-text-block">
+                    <p>В этом разделе собраны материалы, необходимые для разработчиков сервисов.</p>
+                    <p class="go"><a href="service-developer/">Перейти в раздел &rarr;</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            &nbsp;
+        </div>
+        <div class="column">
+            <div class="landing-block">
+                <h2>Для DevOps</h2>
+                <div class="landing-text-block">
+                    <p>В этом разделе собраны материалы, необходимые devops-инженерам, отвечающим за развёртывание и
+                        эксплуатацию платформы.</p>
+                    <p class="go"><a href="devops/">Перейти в раздел &rarr;</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="landing-block">
+                <h2>Для разработчиков платформы</h2>
+                <div class="landing-text-block">
+                    <p>В этом разделе собраны материалы, необходимые для разработчиков платформы.</p>
+                    <p class="go"><a href="platform-developer/">Перейти в раздел &rarr;</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            &nbsp;
+        </div>
+        <div class="column">
+            <div class="landing-block">
+                <h2>Образцовые подходы</h2>
+                <div class="landing-text-block">
+                    <p>В этом разделе собраны материалы, которых стоит придерживаться всем разработчикам. Они
+                        подкреплены практикой и опытом использования.</p>
+                    <p class="go"><a href="best-practice/">Перейти в раздел &rarr;</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
