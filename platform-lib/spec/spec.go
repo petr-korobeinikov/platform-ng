@@ -13,6 +13,12 @@ type (
 		Name        string                       `yaml:"name"`
 		Namespace   string                       `yaml:"namespace"`
 		Environment map[string]map[string]string `yaml:"environment"`
+		Component   []*Component                 `yaml:"component"`
+	}
+
+	Component struct {
+		Name string `yaml:"name"`
+		Type string `yaml:"type"`
 	}
 )
 

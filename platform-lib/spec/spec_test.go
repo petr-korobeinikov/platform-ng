@@ -61,6 +61,24 @@ func TestLoad(t *testing.T) {
 							"FOO": "foo staging override",
 						},
 					},
+					Component: []*Component{
+						{
+							Name: "master",
+							Type: "postgres",
+						},
+						{
+							Name: "olap",
+							Type: "postgres",
+						},
+						{
+							Name: "key-value-storage",
+							Type: "redis",
+						},
+						{
+							Name: "document-storage",
+							Type: "mongodb",
+						},
+					},
 				},
 			},
 			{
@@ -79,6 +97,24 @@ func TestLoad(t *testing.T) {
 						},
 						"staging": {
 							"FOO": "foo staging override",
+						},
+					},
+					Component: []*Component{
+						{
+							Name: "master",
+							Type: "postgres",
+						},
+						{
+							Name: "olap",
+							Type: "postgres",
+						},
+						{
+							Name: "key-value-storage",
+							Type: "redis",
+						},
+						{
+							Name: "document-storage",
+							Type: "mongodb",
 						},
 					},
 				},
