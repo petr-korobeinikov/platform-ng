@@ -1,0 +1,11 @@
+name: wordcounter
+namespace: wordcounting
+
+environment:
+  _:
+    FOO: "foo"
+    NAP_DURATION: "1s"
+  local:
+    FOO: "foo local override"
+  staging:
+    FOO: "foo staging override"

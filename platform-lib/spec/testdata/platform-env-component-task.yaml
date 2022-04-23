@@ -1,0 +1,47 @@
+name: wordcounter
+namespace: wordcounting
+
+environment:
+  _:
+    FOO: "foo"
+    NAP_DURATION: "1s"
+  local:
+    FOO: "foo local override"
+  staging:
+    FOO: "foo staging override"
+
+component:
+  - name: master
+    type: postgres
+
+  - name: olap
+    type: postgres
+
+  - name: key-value-storage
+    type: redis
+
+  - name: document-storage
+    type: mongodb
+
+task:
+  - name: db migrate
+    image: ghcr.io/pkorobeinikov/platform-ng/task/golang-migrate
+
+  - name: db migrate master
+    image: ghcr.io/pkorobeinikov/platform-ng/task/golang-migrate
+    config:
+      component:
+        - name: master
+          type: postgres
+
+  - name: oto
+    image: ghcr.io/pkorobeinikov/platform-ng/task/oto
+
+  - name: protobuf
+    image: ghcr.io/pkorobeinikov/platform-ng/task/protobuf
+
+  - name: doc
+    image: ghcr.io/pkorobeinikov/platform-ng/task/mkdocs-material
+    config:
+      blocking: true
+      port: 8000

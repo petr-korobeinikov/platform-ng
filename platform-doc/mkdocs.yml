@@ -53,6 +53,7 @@ nav:
   - В начало: index.md
   - Для разработчиков сервисов:
       - Введение: service-developer/index.md
+      - Манифест сервиса: service-developer/spec.md
   - Для разработчиков платформы:
       - Введение: platform-developer/index.md
       - ADR:

@@ -1,0 +1,24 @@
+name: wordcounter
+namespace: wordcounting
+
+environment:
+  _:
+    FOO: "foo"
+    NAP_DURATION: "1s"
+  local:
+    FOO: "foo local override"
+  staging:
+    FOO: "foo staging override"
+
+component:
+  - name: master
+    type: postgres
+
+  - name: olap
+    type: postgres
+
+  - name: key-value-storage
+    type: redis
+
+  - name: document-storage
+    type: mongodb
