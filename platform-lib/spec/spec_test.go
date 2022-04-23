@@ -29,6 +29,18 @@ func TestLoad(t *testing.T) {
 				Expected: &Spec{
 					Name:      "wordcounter",
 					Namespace: "wordcounting",
+					Environment: map[string]map[string]string{
+						"_": {
+							"FOO":          "foo",
+							"NAP_DURATION": "1s",
+						},
+						"local": {
+							"FOO": "foo local override",
+						},
+						"staging": {
+							"FOO": "foo staging override",
+						},
+					},
 				},
 			},
 			{
@@ -37,6 +49,18 @@ func TestLoad(t *testing.T) {
 				Expected: &Spec{
 					Name:      "wordcounter",
 					Namespace: "wordcounting",
+					Environment: map[string]map[string]string{
+						"_": {
+							"FOO":          "foo",
+							"NAP_DURATION": "1s",
+						},
+						"local": {
+							"FOO": "foo local override",
+						},
+						"staging": {
+							"FOO": "foo staging override",
+						},
+					},
 				},
 			},
 			{
@@ -45,6 +69,18 @@ func TestLoad(t *testing.T) {
 				Expected: &Spec{
 					Name:      "wordcounter",
 					Namespace: "wordcounting",
+					Environment: map[string]map[string]string{
+						"_": {
+							"FOO":          "foo",
+							"NAP_DURATION": "1s",
+						},
+						"local": {
+							"FOO": "foo local override",
+						},
+						"staging": {
+							"FOO": "foo staging override",
+						},
+					},
 				},
 			},
 		}

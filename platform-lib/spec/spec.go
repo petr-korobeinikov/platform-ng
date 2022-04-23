@@ -10,8 +10,9 @@ const File = "platform.yaml"
 
 type (
 	Spec struct {
-		Name      string `yaml:"name"`
-		Namespace string `yaml:"namespace"`
+		Name        string                       `yaml:"name"`
+		Namespace   string                       `yaml:"namespace"`
+		Environment map[string]map[string]string `yaml:"environment"`
 	}
 )
 
